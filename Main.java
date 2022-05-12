@@ -1,26 +1,25 @@
 package com.company;
 
-class Bahasa{
-    public void obrolan(){
-        System.out.println("Apa kabar?");
+class Olahraga{
+    void bola(){
+        System.out.println("Ada beberapa olahraga yang menggunakan bola");
     }
 }
 
-class BahasaJawa extends Bahasa{
-    public void obrolan(){
-        System.out.println("Piye Kabare?");
-    }
-}
-class BahasaSunda extends Bahasa{
-    public void obrolan(){
-        System.out.println("Kumaha damang?");
+class SepakBola extends Olahraga{
+
+    @Override
+    void bola(){
+        System.out.println("Salah satunya adalah sepak bola");
     }
 }
 
 public class Main {
 
     public static void main(String[] args) {
-        BahasaJawa bahasa = new BahasaJawa();
-        bahasa.obrolan();
+        Olahraga sport = new Olahraga();
+        SepakBola sport1 = new SepakBola();
+
+        sport1.bola();
     }
 }
